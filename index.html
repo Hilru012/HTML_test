@@ -10,7 +10,6 @@
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /* Blood texture background */
             background-image: url('concrete-wall-2.png');
             background-repeat: repeat;
         }
@@ -24,13 +23,32 @@
             margin: 0;
             letter-spacing: 2px;
         }
-        main {
-            max-width: 800px;
+        .container {
+            display: flex;
+            max-width: 900px;
             margin: 2rem auto;
-            padding: 2rem;
             background: #232323;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+        .content {
+            flex: 1;
+            padding: 2rem;
+        }
+        .image-side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+        }
+        .image-side img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #000;
+            margin: 0;
         }
         .feature-list {
             list-style: none;
@@ -55,43 +73,70 @@
             color: #888;
             margin-top: 2rem;
         }
+        .red-char {
+            color: #b71c1c;
+        }
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+            .image-side img {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bloodborne 2</h1>
+        <h1>
+            <span class="red-char">B</span>loodborne <span class="red-char">2</span>
+        </h1>
         <p>The Hunt Begins Again</p>
-        <img 
-            src="images.jpg"
-            alt="Gothic Yharnam Night - Bloodborne"
-            style="width:100%;max-width:700px;border-radius:12px;margin-top:1.5rem;box-shadow:0 2px 12px #000;"
-        >
     </header>
-    <main>
-        <section>
-            <h2>About the Game</h2>
-            <p>
-                Bloodborne 2 is the highly anticipated sequel to the critically acclaimed action RPG. 
-                Venture into a new gothic world filled with nightmarish creatures, challenging combat, and deep lore.
-            </p>
-        </section>
-        <section>
-            <h2>Features</h2>
-            <ul class="feature-list">
-                <li>New haunting environments to explore</li>
-                <li>Expanded arsenal of weapons and abilities</li>
-                <li>Intense, fast-paced combat system</li>
-                <li>Rich, mysterious storylines and lore</li>
-                <li>Online multiplayer and co-op modes</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Release Date</h2>
-            <p>Coming Soon</p>
-        </section>
-    </main>
+    <div class="container">
+        <div class="content">
+            <section>
+                <h2>About the Game</h2>
+                <p>
+                    Bloodborne 2 is the highly anticipated sequel to the critically acclaimed action RPG. 
+                    Venture into a new gothic world filled with nightmarish creatures, challenging combat, and deep lore.
+                </p>
+                <p>
+                    <strong>Lore Connection:</strong> Dopo gli eventi del primo Bloodborne, la città di Yharnam è ancora segnata dalla maledizione del sangue. Nuove forze oscure emergono dalle profondità, e antichi segreti legati agli Dei Antenati minacciano di risvegliare orrori dimenticati. Il cacciatore dovrà affrontare le conseguenze delle scelte passate e scoprire la verità dietro il ciclo eterno della caccia.
+                </p>
+            </section>
+            <section>
+                <h2>Features</h2>
+                <ul class="feature-list">
+                    <li>New haunting environments to explore</li>
+                    <li>Expanded arsenal of weapons and abilities</li>
+                    <li>Intense, fast-paced combat system</li>
+                    <li>Rich, mysterious storylines and lore</li>
+                    <li>Online multiplayer and co-op modes</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Release Date</h2>
+                <p>Coming Soon</p>
+            </section>
+        </div>
+        <div class="image-side">
+            <img 
+                src="OIP.webp"
+                alt="Gothic Yharnam Night - Bloodborne"
+            >
+        </div>
+    </div>
     <footer>
         &copy; 2025 Bloodborne 2 Fan Page. All rights reserved.
     </footer>
+    <section style="max-width:900px;margin:2rem auto 2rem auto;padding:2rem;background:#232323;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.5);color:#eaeaea;">
+        <h2>Recensione in anteprima di Sabaku no Maiku</h2>
+        <blockquote style="font-style:italic;border-left:4px solid #b71c1c;padding-left:1rem;">
+            "Bloodborne 2 riesce a catturare l'essenza oscura e affascinante del primo capitolo, portando il giocatore in un viaggio ancora più profondo tra incubi e misteri. Il gameplay è stato ulteriormente raffinato, con nuove meccaniche che rendono ogni scontro unico e coinvolgente. L'atmosfera gotica e la narrazione criptica mi hanno conquistato fin dai primi minuti: è un'esperienza che ogni appassionato della saga non può perdere."
+            <br><br>
+            <span style="font-weight:bold;">- Sabaku no Maiku</span>
+        </blockquote>
+    </section>
 </body>
 </html>
